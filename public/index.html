@@ -1,0 +1,27 @@
+<HTML>
+    <HEAD>
+        <title>My test HTML file</title>
+        <script src="components/angular/angular.min.js"></script>
+        <script src="components/jquery/dist/jquery.min.js"></script>
+        <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="components/bootstrap/dist/css/bootstrap.min.css"></link>
+        <script src="app.js"></script>
+        <style>
+            body {
+                margin: 10px 10px 10px 10px;
+            }
+        </style>
+    </HEAD>
+    <BODY ng-app='myApp' ng-controller='myController'>
+        This is a test static HTML file.<br/>
+        {{variable}}<br/>
+        <input type="text" ng-model='variable'></input><p/>
+        
+        <br/>
+
+        <button ng-click="doSomething()">Press me</button>
+        <button ng-click="clearIt()">Clear It</button>
+        <button ng-click="getDirectory()">Directory</button><br/>
+        <div ng-bind-html="result | sanitize"></div>
+    </BODY>
+</HTML>
